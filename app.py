@@ -3,6 +3,8 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from datetime import datetime
 
+# This is to test
+
 app = FastAPI()
 
 # Mount static files and templates
