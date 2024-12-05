@@ -1,36 +1,95 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and HTML Styling */
 body,
 html {
     height: 100%;
-    margin: 0;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    background: linear-gradient(145deg, #d7e1ec, #f1f7fc);
+    /* Soft gradient background */
 }
 
+/* Login Container */
 #login-container {
     background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    border-radius: 15px;
+    /* Rounded corners for a softer look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
     text-align: center;
+    width: 100%;
+    max-width: 400px;
+    /* Restrict max width for better responsiveness */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* Consistent spacing between elements */
 }
 
+/* Heading Styling */
+#login-container h1 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Input Field Styling */
 #login-container input {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    padding: 12px;
+    font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Input Focus Effect */
+#login-container input:focus {
+    border-color: #007bff;
+    /* Add a blue border on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    /* Add glow effect */
+}
+
+/* Button Styling */
 #login-container button {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
     background: #007bff;
+    /* Default blue background */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button Hover and Active Effect */
+#login-container button:hover {
+    background: #0056b3;
+    /* Darker blue on hover */
+}
+
+#login-container button:active {
+    transform: scale(0.98);
+    /* Slight "pressed" effect */
+}
+
+/* Optional Helper Text */
+#login-container p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
 }
