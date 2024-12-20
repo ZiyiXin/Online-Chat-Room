@@ -1,6 +1,5 @@
 const username = localStorage.getItem('username');
 const websocket = new WebSocket(`ws://${window.location.host}/ws`);
-
 const messagesDiv = document.getElementById('messages');
 const messageInput = document.getElementById('message-input');
 const sendButton = document.getElementById('send-button');
